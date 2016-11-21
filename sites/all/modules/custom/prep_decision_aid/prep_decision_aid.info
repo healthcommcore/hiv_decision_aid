@@ -1,0 +1,6 @@
+name = PrEP Decision Aid
+description = A decision aid to help gay males decide whether or not PrEP is right for them
+core = 7.x
+package = custom
+; files[] = jquery_update.module
+; files[] = jquery_update.install

@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Enables the PrEP decision aid
+ */
+
+function prep_decision_aid_init() {
+  $module_path = drupal_get_path('module', 'prep_decision_aid');
+  drupal_add_js($module_path . '/js/react.min.js', array('scope' => 'footer') );
+  drupal_add_js($module_path . '/js/react-dom.min.js', array('scope' => 'footer') );
+  drupal_add_js($module_path . '/js/up_app.js', array('scope' => 'footer') );
+  drupal_add_css($module_path . '/css/index.css');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function prep_decision_aid_menu() {
+
+  $items['prep_decision_aid'] = array(
+    'title' => 'Take the 4 steps',
+    'description' => 'A decision tool for men and their health providers.',
+    'page callback' => 'take_the_4_steps',
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+/**
+ * Load decision aid page
+ */
+function take_the_4_steps() {
+  return '<div id="up-app"></div>';
+}
+
+/**
+ * Implements hook_theme()
+ */
+function prep_decision_aid_theme() {
+  return array(
+    'prep_decision_aid_template' => array(
+      'template' => 'templates/prep_decision_aid',
+    ),
+  );
+}
+
