@@ -82,27 +82,33 @@
 
 <header role="banner" class="">
   <div class="container">
-    <div class="header-logo row">
-      <?php if ($logo): ?>
-      <div class="<?php print $logo_width; ?>">
-          <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
-        </div>
-      <?php endif; ?>
-    <?php if (!empty($page['header_center'])): ?>
-      <div class="col-sm-3">
-        <?php print render($page['header_center']); ?>
-      </div>
-    <?php endif; ?>
-    <?php if (!empty($page['header_right'])): ?>
-      <div class="col-sm-3">
+    <div class="row">
+      <div class="col-sm-4 col-sm-push-6">
         <?php print render($page['header_right']); ?>
       </div>
-    <?php endif; ?>
     </div>
   </div>
 </header>
+<div class="logo-row">
+  <div class="container">
+    <div class="row">
+        <?php if ($logo): ?>
+          <div class="position absolute">
+            <div class="col-md-6">
+              <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              </a>
+            </div>
+          </div>
+        <?php endif; ?>
+        <?php if ($page['search']) : ?>
+          <div class="col-md-6">
+            <?php print render($page['search']); ?>
+          </div>
+        <?php endif; ?>
+    </div>
+  </div>
+</div>
 
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -116,6 +122,9 @@
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse navbar-color">
         <nav role="navigation" class="container">
+          <div class="container">
+          <div class="row">
+          <div class="col-md-9 navbar-margin">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
@@ -125,6 +134,9 @@
           <?php if (!empty($page['navigation'])): ?>
             <?php print render($page['navigation']); ?>
           <?php endif; ?>
+        </div>
+        </div>
+        </div>
         </nav>
       </div>
     <?php endif; ?>
