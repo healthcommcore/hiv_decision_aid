@@ -110,3 +110,45 @@ strong {
   font-family: $semi-font;
 }
 
+////////////
+// MEDIUM //
+////////////
+
+// Nav
+$navlink-size-md: 20px;
+$navlink-padding-md: 14px 28px 20px 28px;
+
+// Hero
+$hero-size-md: 2.1em;
+
+$h1-size-md: 2.6em;
+$h1-margin-md: 70px 0 40px 0;
+$h1-padding-md: 0 20px 5px 284px;
+
+////////////
+// SMALL ///
+////////////
+$navlink-size-sm: 16px;
+$navlink-padding-sm: 10px 20px 16px 20px;
+$submenu-link-size-sm: 0.9em;
+$hero-size-sm: 1.8em;
+$main-container-margin-sm: 50px 0 0 0;
+$main-content-margin-sm: 0 20px 60px 5px;
+$h1-size-sm: 2.3em;
+$h1-margin-sm: 50px 0 40px 0;
+$h1-padding-sm: 0 20px 5px 30px;
+
+//////////////////
+// EXTRA SMALL ///
+//////////////////
+$hero-size-xs: 1.4em;
+
+$navlink-link-xs: $white;
+$navlink-size-xs: 18px;
+$navlink-link-active-xs: $dk-blue;
+$navlink-bkgrd-active-xs: $white;
+$navlink-padding-xs: 8px 0 10px 20px;
+
+$h1-size-xs: 2.0em;
+$h1-margin-xs: 20px 0;
+$h1-padding-xs: 10px 0 5px 15px;

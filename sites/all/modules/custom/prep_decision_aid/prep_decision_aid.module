@@ -11,7 +11,7 @@ function prep_decision_aid_init() {
   drupal_add_js($module_path . '/js/react-dom.min.js', array('scope' => 'footer') );
   drupal_add_js($module_path . '/js/up_app.js', array('scope' => 'footer') );
   drupal_add_css($module_path . '/css/index.css');
-  drupal_add_css($module_path . '/css/prep_style.css');
+  drupal_add_css($module_path . '/css/up_styles.css');
 }
 
 /**
@@ -20,7 +20,7 @@ function prep_decision_aid_init() {
 function prep_decision_aid_menu() {
 
   $items['prep_decision_aid'] = array(
-    'title' => 'Take the 4 steps',
+    'title' => 'A decision tool for men and their health providers',
     'description' => 'A decision tool for men and their health providers.',
     'page callback' => 'take_the_4_steps',
     'access arguments' => array('access content'),

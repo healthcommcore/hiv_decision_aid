@@ -68,6 +68,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+  <script src="https://use.typekit.net/fxc6sme.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
   <!--[if lt IE 9]>
     <body class="<?php print $classes . ' ieclass'; ?>" <?php print $attributes;?>>
