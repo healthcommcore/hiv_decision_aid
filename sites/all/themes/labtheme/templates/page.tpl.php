@@ -83,7 +83,7 @@
 <header role="banner" class="">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 col-sm-push-6">
+      <div class="col-sm-4 col-sm-push-8">
         <?php print render($page['header_right']); ?>
       </div>
     </div>
@@ -102,7 +102,7 @@
           </div>
         <?php endif; ?>
         <?php if ($page['search']) : ?>
-          <div class="col-md-6">
+          <div class="col-md-4 col-md-push-8">
             <?php print render($page['search']); ?>
           </div>
         <?php endif; ?>

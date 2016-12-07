@@ -87,8 +87,6 @@ header {
 
 .hero {
   width: auto;
-  @include border(top, 3px, $header-color);
-  @include border(bottom, 3px, $header-color);
   h1 {
     font-size: $hero-size;
     color: $hero-color;
@@ -96,9 +94,9 @@ header {
     margin: $hero-position;
   }
   .hero-img {
-    height: $hero-img-ht;
-    background: $hero-img-img;
-    background-size: cover;
+    //height: $hero-img-ht;
+    //background: $hero-img-img;
+    //background-size: cover;
   }
 }
 
