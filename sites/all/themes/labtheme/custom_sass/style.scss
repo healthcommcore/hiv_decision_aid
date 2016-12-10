@@ -7,27 +7,32 @@ body {
   font-size: 14px;
   font-family: $body-font;
   font-weight: $lt-weight;
+  letter-spacing: -0.03em;
+  word-spacing: 0.04em;
   color: $body-color;
 }
 
 a {
   color: $link-color;
+  font-weight: $med-weight;
 }
 
 h1, h2, h3, h4, strong {
-  font-weight: normal;
 }
 
 h1 {
   font-size: $h1-size;
   color: $h1-color;
   font-family: $h1-style;
+  font-weight: $h1-weight;
   line-height: $h1-height;
   margin: $h1-margin;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   font-size: $h2-size;
+  font-weight: $h2-weight;
   color: $h2-color;
   font-family: $h2-style;
   line-height: $h2-height;
@@ -46,20 +51,23 @@ header {
   background: url('../images/header_bkgrd.jpg') 0 0 no-repeat;
   background-size: cover;
   padding: $header-padding;
-  .logo img {
-  }
-  .block-search {
-    margin: $search-position;
+  .header-logos {
+    p:first-child {
+      margin: 10px 30px 0 0;
+    }
   }
 }
 
 .logo-row {
   background: $white;
   display: block;
-  height: 55px;
-  @include border(bottom, 1px, $dk-blue);
+  height: $logo-row-height;
+  @include border(bottom, 1px, $navlink-link);
   .position {
-    top: 90px;
+    top: 105px;
+  }
+  .search {
+    margin-top: 20px;
   }
 }
 
@@ -73,16 +81,19 @@ header {
 
 .navbar-nav > li > a {
   color: $navlink-link;
+  font-weight: $navlink-weight;
   font-size: $navlink-size;
   padding: $navlink-padding;
+  @include border(top, 7px, $white);
 }
 
 .nav > li > a:hover,
 .nav > li > a.active,
 .nav > li.active-trail a.active-trail,
 .nav > li > a:focus {
-  //background: $navlink-bkgrd-active;
+  background: $navlink-bkgrd-active;
   color: $navlink-link-active;
+  border-color: $navlink-link;
 }
 
 .hero {
@@ -93,11 +104,46 @@ header {
     font-family: $hero-style;
     margin: $hero-position;
   }
-  .hero-img {
-    //height: $hero-img-ht;
-    //background: $hero-img-img;
-    //background-size: cover;
+  .hero-content {
+    z-index: 100;
+    width: 50%;
+    .message {
+      display: block;
+      background: rgba(0, 45, 97, 0.7);
+      text-align: right;
+      margin-bottom: 20px;
+      h1 {
+        margin: 0;
+        padding: 22px 40px 28px 0;
+        font-size: 3.4em;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+      }
+      .bolder {
+        font-weight: $reg-weight;
+      }
+    }
   }
+}
+
+
+.prep-button {
+  margin-bottom: 40px;
+  .tagline {
+    text-align: center;
+  }
+  .bolder {
+    font-weight: $reg-weight;
+  }
+}
+
+.tagline {
+  display: block;
+  background: $dk-blue;
+  padding: 10px 40px;
+  color: $white;
+  font-size: 1.3em;
+  font-weight: $lt-weight;
 }
 
 .submenu {
@@ -149,6 +195,16 @@ header {
 
 .page-content {
   line-height: $body-height;
+  p {
+    margin: $paragraph-margin;
+  }
+  ul, ol {
+    margin-top: $list-margin;
+  }
+  ul li, 
+  ol li {
+    margin: $list-item-margin;
+  }
 }
 
 .home-news {
@@ -180,6 +236,44 @@ header {
   */
 }
 
+.btn {
+  border-radius: 0;
+}
+
+.btn-prep {
+  background-color: $orange;
+  background-repeat: no-repeat;
+  color: $white;
+  text-align: right;
+  font-weight: $book-weight;
+}
+
+a.btn-prep:hover {
+  color: $white;
+}
+
+.btn-prep-lg,
+.btn-pre-sm {
+  background-position: 0 50%;
+}
+
+.btn-prep-lg {
+  padding: 10px 40px 12px 100px;
+  background-image: url('../images/up_arrow_lg.png');
+  font-size: 2.4em;
+}
+
+.btn-prep-sm {
+  padding: 10px 50px 12px 70px;
+  background-image: url('../images/up_arrow_sm.png');
+  font-size: 1.1em;
+}
+
+.btn-prep-back {
+}
+
+.btn-prep-next {
+}
 .no-bullets {
   list-style: none;
   li {
@@ -192,18 +286,51 @@ header {
   margin: 5px 20px 3px 0;
 }
 
+.lead-in-txt {
+  color: $green;
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.space-before-list {
+  margin: $space-before-list;
+}
+
 footer {
-  @include border(top, 5px, $footer-border-color);
 }
 
 .footer {
   border-top: none;
   margin-top:25px;
+  padding-bottom: 40px;
+}
+
+.footer-logos.col-md-4 {
+  padding: 0;
 }
 
 .footer-logos {
-  p {
-    margin-bottom: 20px;
+  .up-footer {
+    padding: 0 20px 17px 20px;
+    margin: 0;
+  }
+  .institution-logos {
+    padding: 50px 20px;
+    @include border(top, 1px, $white);
+    .fenway-footer {
+      margin: 8px 0 20px;
+    }
+    .hms-footer img,
+    .bi-footer img {
+      width: 95%;
+    }
+    .hms-footer {
+      margin: 10px 8px 0 8px;
+    }
+    .bi-footer {
+      margin: 0 8px;
+    }
   }
 }
 

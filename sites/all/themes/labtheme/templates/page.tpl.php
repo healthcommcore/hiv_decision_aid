@@ -103,7 +103,9 @@
         <?php endif; ?>
         <?php if ($page['search']) : ?>
           <div class="col-md-4 col-md-push-8">
-            <?php print render($page['search']); ?>
+            <div class="search">
+              <?php print render($page['search']); ?>
+            </div>
           </div>
         <?php endif; ?>
     </div>
@@ -122,9 +124,6 @@
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse navbar-color">
         <nav role="navigation" class="container">
-          <div class="container">
-          <div class="row">
-          <div class="col-md-9 navbar-margin">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
@@ -134,9 +133,6 @@
           <?php if (!empty($page['navigation'])): ?>
             <?php print render($page['navigation']); ?>
           <?php endif; ?>
-        </div>
-        </div>
-        </div>
         </nav>
       </div>
     <?php endif; ?>
@@ -150,6 +146,11 @@
   <div class="container">
     <div class="row">
     <div class="main-container-margin">
+    <?php if (!empty($page['prep_button'])): ?>
+      <div class="prep-button">
+        <?php print render($page['prep_button']); ?>
+      </div>
+    <?php endif; ?>
     <?php if (!empty($page['left_column'])): ?>
       <aside class="col-sm-3 hidden-xs" role="complementary">
         <?php print render($page['left_column']); ?>
@@ -197,12 +198,12 @@
 	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
 		<div class="row">
 			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-8 footer-logos">
+				<div class="col-md-4 footer-logos">
 					<?php print render($page['footer_logos']); ?>
 				</div>
 			<?php endif; ?>
 			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 footer-legal">
+				<div class="col-md-4 col-md-push-4 footer-legal">
 					<?php print render($page['footer_legal']); ?>
 				</div>
 			<?php endif; ?>
