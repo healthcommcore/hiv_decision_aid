@@ -269,11 +269,6 @@ a.btn-prep:hover {
   font-size: 1.1em;
 }
 
-.btn-prep-back {
-}
-
-.btn-prep-next {
-}
 .no-bullets {
   list-style: none;
   li {
@@ -373,6 +368,89 @@ footer {
 
 .absolute {
   position: absolute;
+}
+
+// PrEP tool
+
+#up-app {
+  input.form-control[type=text] {
+    font-size: 1.3em;
+    font-weight: $reg-weight;
+    width: 130px;
+    height: 50px;
+    border: $med-blue 1px solid;
+    border-radius: 0;
+  }
+  .has-error input.form-control[type=text] {
+    border-color: #a94442;
+  }
+}
+
+.page-content {
+  .tool-header p {
+    margin: 0;
+  }
+  ol p {
+    margin-bottom: 10px;
+  }
+}
+
+.tool-header {
+  background: $dk-med-blue;
+  color: $white;
+  font-size: 1.3em;
+  padding: 10px 40px;
+  margin-bottom: 60px;
+  .bolder {
+    font-weight: $reg-weight;
+  }
+}
+
+h1 .bolder {
+  font-weight: $reg-weight;
+}
+
+.prep-instructions {
+  color: $med-blue;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.step1 {
+  .prep-instructions {
+    margin-bottom: 40px;
+  }
+  .questions {
+    li {
+      margin-bottom: 40px;
+    }
+  }
+  .radio-inline {
+    font-weight: $lt-weight;
+  }
+  .text-danger {
+    font-weight: $reg-weight;
+    line-height: 1.4;
+  }
+}
+
+.step2 {
+  .border {
+    border-color: $green;
+  }
+  .filled {
+    background-color: $orange;
+  }
+}
+
+.btn-prep-left {
+}
+
+.btn-prep-right {
+  padding: 10px 100px 12px 30px;
+  background-image: url('../images/up_arrow_sm.png');
+  background-position: 90% 50%;
+  font-size: 1.1em;
 }
 
 

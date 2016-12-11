@@ -20,7 +20,9 @@ function prep_decision_aid_init() {
 function prep_decision_aid_menu() {
 
   $items['prep_decision_aid'] = array(
-    'title' => 'A decision tool for men and their health providers',
+    //'title' => 'A decision tool for men and their health providers',
+    //'title callback' => 'prep_title',
+    //'title arguments' => array('New title'),
     'description' => 'A decision tool for men and their health providers.',
     'page callback' => 'take_the_4_steps',
     'access arguments' => array('access content'),
@@ -29,21 +31,49 @@ function prep_decision_aid_menu() {
   return $items;
 }
 
+/*
+function prep_title ($title) {
+  //return '<div class="prep-title">' . $title . '</div>';
+  $output = array(
+    '#type' => 'markup',
+    '#markup' => $title,
+    '#prefix' => '<div class="test">',
+    '#suffix' => '</div>'
+  );
+  return render($output);
+  
+}
+ */
+
 /**
  * Load decision aid page
  */
 function take_the_4_steps() {
   return '<div id="up-app"></div>';
+  //return theme('prep_decision_aid_theme');
 }
 
 /**
  * Implements hook_theme()
  */
+/*
 function prep_decision_aid_theme() {
   return array(
     'prep_decision_aid_template' => array(
+      'variables' => array(
+        'node' => NULL,
+      ),
       'template' => 'templates/prep_decision_aid',
     ),
   );
 }
+
+function template_preprocess_prep_decision_aid_template(&$variables) {
+  $node = $variables['node'];
+  $variables['title'] = array(
+    '#type' => 'markup',
+    '#title' => $node-> title
+  );
+}
+ */
 
