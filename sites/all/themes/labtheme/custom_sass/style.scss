@@ -384,6 +384,16 @@ footer {
   .has-error input.form-control[type=text] {
     border-color: #a94442;
   }
+  .btn:hover,
+  .btn:focus {
+    color: $white;
+  }
+  .border {
+    border-color: $green;
+  }
+  .filled {
+    background-color: $orange;
+  }
 }
 
 .page-content {
@@ -435,15 +445,39 @@ h1 .bolder {
 }
 
 .step2 {
-  .border {
-    border-color: $green;
+  .prep-chart {
+    margin-bottom: 50px;
   }
-  .filled {
-    background-color: $orange;
+  .results-heading {
+    @include border(bottom, 1px, $dk-blue); 
+    margin-bottom: 40px;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .result-numbers {
+    margin-left: 50px;
+    line-height: 1.3;
+    .bolder {
+      font-weight: $med-weight;
+    }
+    .number {
+      font-size: 1.5em;
+    }
+    .with-prep {
+      color: $orange;
+    }
+    .without-prep {
+      color: $green;
+    }
   }
 }
 
 .btn-prep-left {
+  padding: 10px 30px 12px 85px;
+  background-image: url('../images/up_arrow_sm_back.png');
+  background-position: 10% 50%;
+  font-size: 1.1em;
 }
 
 .btn-prep-right {
@@ -452,6 +486,7 @@ h1 .bolder {
   background-position: 90% 50%;
   font-size: 1.1em;
 }
+
 
 
 @media (min-width: 992px) and (max-width: 1199px) {
