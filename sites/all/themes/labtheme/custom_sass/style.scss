@@ -556,6 +556,11 @@ h1 .bolder {
   }
 }
 
+@media print {
+  body {
+    overflow: visible;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
 }
