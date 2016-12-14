@@ -556,6 +556,31 @@ h1 .bolder {
   }
 }
 
+.summary {
+  .list-space {
+    margin-top: 20px;
+  }
+  .question {
+    p:first-child {
+      margin-bottom: 5px;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .orange {
+      color: $orange;
+    }
+    .response, 
+    .italic.response {
+      display: inline-block;
+      font-style: normal;
+      font-weight: $med-weight;
+      font-size: 1.4em;
+    }
+  }
+}
+
+
 @media print {
   body {
     overflow: visible;
