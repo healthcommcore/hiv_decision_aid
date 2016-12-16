@@ -492,6 +492,7 @@ h1 .bolder {
   font-size: 1.1em;
 }
 
+// STEP 3
 .page-content .step3 {
   .slider-question p {
     margin-bottom: 7px;
@@ -507,28 +508,6 @@ h1 .bolder {
     border: $med-blue 1px solid;
     margin-top: 20px;
     margin-bottom: 50px;
-  }
-  .slider-question {
-    margin-bottom: 50px;
-    p {
-      font-weight: $med-weight;
-    }
-    .values {
-      font-color: $dk-med-blue;
-      margin-bottom: 5px;
-    }
-  }
-  .rc-slider-track {
-    background: $med-blue;
-    height: 8px;
-  }
-  .rc-slider-handle {
-    background: $med-blue;
-    border: #fff 3px solid;
-    height: 24px;
-    width: 24px;
-    margin-left: -12px;
-    margin-top: -9px;
   }
 }
 
@@ -563,6 +542,40 @@ h1 .bolder {
   border: none;
 }
 
+.slider-question {
+  margin-bottom: 50px;
+  p {
+    font-weight: $med-weight;
+  }
+  .values {
+    font-color: $dk-med-blue;
+    margin-bottom: 5px;
+  }
+}
+
+.rc-slider-track {
+  background: $med-blue;
+  height: 8px;
+}
+.rc-slider-handle {
+  background: $med-blue;
+  border: #fff 3px solid;
+  height: 24px;
+  width: 24px;
+  margin-left: -12px;
+  margin-top: -9px;
+}
+.rc-slider-dot {
+  border-radius: 0;
+  width: 3px;
+  bottom: -4px;
+}
+.rc-slider-dot-active,
+.rc-slider-dot {
+  border: none;
+}
+
+// SUMMARY
 .summary {
   .summary-step {
     padding: 0 20px 50px 20px;
@@ -590,16 +603,34 @@ h1 .bolder {
     line-height: 1;
   }
   .question {
+    margin-bottom: 20px;
     p:first-child {
       margin-bottom: 5px;
       ul li {
         margin-bottom: 10px;
       }
     }
+    margin-bottom: 0;
   }
-  .result-numbers {
-    margin-left: 0;
+  p.orange.italic {
+    line-height: 1;
+    display: inline;
   }
+  .italic {
+    font-style: italic;
+  }
+  .orange {
+    color: $orange;
+  }
+  .response, 
+  .italic.response {
+    font-style: normal;
+    font-weight: $med-weight;
+    font-size: 1.4em;
+  }
+}
+.result-numbers {
+  margin-left: 0;
 }
 
 .btn.btn-prep-summary {
