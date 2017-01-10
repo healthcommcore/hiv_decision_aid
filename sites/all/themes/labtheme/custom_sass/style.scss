@@ -288,9 +288,18 @@ a.btn-prep:hover {
   margin-bottom: 20px;
 }
 
-.space-before-list {
-  margin: $space-before-list;
+h2.space-before-list {
+  margin: $h2-space-before-list;
 }
+
+h3.space-before-list {
+  margin: $h3-space-before-list;
+}
+
+ul.list-within-list {
+  margin: $list-within-list;
+}
+
 
 footer {
 }
