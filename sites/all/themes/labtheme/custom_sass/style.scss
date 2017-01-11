@@ -140,7 +140,7 @@ header {
 .tagline {
   display: block;
   background: $dk-blue;
-  padding: 10px 40px;
+  padding: 8.6px 40px 10px 40px;
   color: $white;
   font-size: 1.3em;
   font-weight: $lt-weight;
@@ -469,6 +469,12 @@ h1 .bolder {
     font-weight: $reg-weight;
     line-height: 1.4;
   }
+  .std-table {
+    width: 35%;
+  }
+  .std-table > tbody > tr > td {
+    border: none;
+  }
 }
 
 .step2 {
@@ -599,6 +605,14 @@ h1 .bolder {
 .rc-slider-dot-active,
 .rc-slider-dot {
   border: none;
+}
+
+// NEXT STEPS
+
+#up-app .step4 {
+  input.form-control[type=text] {
+    width: 600px;
+  }
 }
 
 // SUMMARY
