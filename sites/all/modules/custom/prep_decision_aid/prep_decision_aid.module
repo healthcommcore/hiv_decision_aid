@@ -5,14 +5,20 @@
  * Enables the PrEP decision aid
  */
 
-function prep_decision_aid_init() {
+/**
+ * Implements hook_preprocess_page()
+ */
+function prep_decision_aid_preprocess_page(&$variables) {
   $module_path = drupal_get_path('module', 'prep_decision_aid');
-  drupal_add_js($module_path . '/js/react.min.js', array('scope' => 'footer') );
-  drupal_add_js($module_path . '/js/react-dom.min.js', array('scope' => 'footer') );
-  drupal_add_js($module_path . '/js/up_app.js', array('scope' => 'footer') );
-  drupal_add_css($module_path . '/css/index.css');
-  drupal_add_css($module_path . '/css/up_styles.css');
+  if (current_path() == 'prep_decision_aid') {
+    //drupal_add_js($module_path . '/js/react.min.js', array('scope' => 'footer') );
+    //drupal_add_js($module_path . '/js/react-dom.min.js', array('scope' => 'footer') );
+    drupal_add_js($module_path . '/js/up_app.js', array('scope' => 'footer') );
+    drupal_add_css($module_path . '/css/index.css');
+    drupal_add_css($module_path . '/css/up_styles.css');
+  }
 }
+
 
 /**
  * Implements hook_menu().
