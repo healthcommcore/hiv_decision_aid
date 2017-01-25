@@ -64,7 +64,7 @@ header {
   height: $logo-row-height;
   @include border(bottom, 1px, $navlink-link);
   .position {
-    top: 105px;
+    top: 113px;
   }
   .search {
     margin-top: 20px;
@@ -673,7 +673,7 @@ h1 .bolder {
 }
 
 .btn.btn-prep-summary {
-  padding: 20px 10px 20px 60px;
+  padding: 20px 30px 20px 60px;
   background-image: url('../images/up_arrow_sm.png');
   background-position: -10px 30%;
   font-size: 1.1em;
@@ -681,6 +681,11 @@ h1 .bolder {
   margin: 0 30px 15px 30px;
   white-space: normal;
   text-align: left;
+  width: 300px;
+}
+
+.page-content p.disclaimer {
+  margin-top: 20px;
 }
 
 .notes {
