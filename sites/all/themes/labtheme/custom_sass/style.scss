@@ -1,4 +1,4 @@
-@import '../bootstrap_sass/bootstrap.scss';
+//@import '../bootstrap_sass/bootstrap.scss';
 //@import 'fonts.scss';
 @import 'variables.scss';
 
@@ -48,7 +48,8 @@ h3 {
 }
 
 header {
-  background: url('../images/header_bkgrd_v2.jpg') 0 0 no-repeat;
+  background-image: url('../images/header_bkgrd_v2.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   padding: $header-padding;
   .header-logos {
@@ -64,10 +65,14 @@ header {
   height: $logo-row-height;
   @include border(bottom, 1px, $navlink-link);
   .position {
-    top: 113px;
+    top: 105px;
   }
   .search {
     margin-top: 20px;
+  }
+  .logo {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -140,9 +145,9 @@ header {
 .tagline {
   display: block;
   background: $dk-blue;
-  padding: 8.6px 40px 10px 40px;
   color: $white;
   font-size: 1.3em;
+  line-height: 2.1;
   font-weight: $lt-weight;
 }
 
@@ -326,12 +331,9 @@ footer {
   .institution-logos {
     padding: 50px 20px;
     @include border(top, 1px, $white);
+    width: 75%;
     .fenway-footer {
       margin: 8px 0 20px;
-    }
-    .hms-footer img,
-    .bi-footer img {
-      width: 95%;
     }
     .hms-footer {
       margin: 10px 8px 0 8px;
@@ -548,7 +550,7 @@ h1 .bolder {
   padding-bottom: 25px;
   font-style: italic;
   color: $white;
-  font-size: 0.9em;
+  font-size: 0.8em;
   line-height: 1.3;
 }
 .slider-scale-left {
@@ -586,7 +588,7 @@ h1 .bolder {
 }
 
 .rc-slider-track {
-  background: $med-blue;
+  background: none;
   height: 8px;
 }
 .rc-slider-handle {
@@ -772,6 +774,43 @@ h1 .bolder {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    padding: $header-padding-md;
+  }
+  .navbar-nav > li > a {
+    font-size: $navlink-size-md;
+    padding: $navlink-padding-md;
+  }
+  .hero {
+    .hero-content {
+      .message h1 {
+        font-size: 3.0em;
+      }
+    }
+  }
+  .btn-prep-lg {
+    font-size: 2.2em;
+  }
+  .footer-logos {
+    .institution-logos {
+      width: 90%;
+    }
+  }
+  header {
+    background-position: 38% 50%;
+  }
+  .logo-row {
+    .logo {
+      width: 90%;
+    }
+  }
+  .tagline {
+    font-size: 1.1em;
+    line-height: 2.45;
+  }
+  .main-content-margin {
+    margin: $main-content-margin-md;
+  }
 }
 
 @media (max-width: 991px) {

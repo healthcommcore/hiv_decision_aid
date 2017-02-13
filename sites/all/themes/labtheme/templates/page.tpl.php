@@ -83,7 +83,7 @@
 <header role="banner" class="">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 col-sm-push-8">
+      <div class="col-lg-4 col-md-5 col-lg-push-8 col-md-push-7">
         <?php print render($page['header_right']); ?>
       </div>
     </div>
@@ -94,9 +94,9 @@
     <div class="row">
         <?php if ($logo): ?>
           <div class="position absolute">
-            <div class="col-md-6">
+            <div>
               <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             </div>
           </div>
@@ -198,12 +198,12 @@
 	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
 		<div class="row">
 			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-4 footer-logos">
+				<div class="col-md-6 footer-logos">
 					<?php print render($page['footer_logos']); ?>
 				</div>
 			<?php endif; ?>
 			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 col-md-push-4 footer-legal">
+				<div class="col-md-4 col-md-push-2 footer-legal">
 					<?php print render($page['footer_legal']); ?>
 				</div>
 			<?php endif; ?>
