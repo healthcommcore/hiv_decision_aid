@@ -83,7 +83,7 @@
 <header role="banner" class="">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-5 col-lg-push-8 col-md-push-7">
+      <div class="col-lg-4 col-md-5 col-sm-6 col-lg-push-8 col-md-push-7 col-sm-push-6">
         <?php print render($page['header_right']); ?>
       </div>
     </div>
@@ -102,7 +102,7 @@
           </div>
         <?php endif; ?>
         <?php if ($page['search']) : ?>
-          <div class="col-md-4 col-md-push-8">
+          <div class="col-xs-4 col-xs-push-8">
             <div class="search">
               <?php print render($page['search']); ?>
             </div>
@@ -113,12 +113,12 @@
 </div>
 
 <div class="navbar-header">
+  <div class="container">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+      Menu
     </button>
+  </div>
 </div>
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
@@ -198,12 +198,12 @@
 	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
 		<div class="row">
 			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-6 footer-logos">
+				<div class="col-md-6 col-xs-5 footer-logos">
 					<?php print render($page['footer_logos']); ?>
 				</div>
 			<?php endif; ?>
 			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 col-md-push-2 footer-legal">
+				<div class="col-md-4 col-md-push-2 col-xs-7 footer-legal">
 					<?php print render($page['footer_legal']); ?>
 				</div>
 			<?php endif; ?>
